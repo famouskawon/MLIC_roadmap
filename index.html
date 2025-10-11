@@ -58,15 +58,17 @@
         <div style="width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#60a5fa,#34d399)"></div>
         <div>
           <h1>UNIST MLIC</h1>
-          <div class="sub">RL 1‑Year Roadmap</div>
+          <div class="sub">RL 1-Year Roadmap</div>
         </div>
       </div>
       <nav class="nav" id="nav"></nav>
       <div style="margin-top:16px;display:grid;gap:8px">
-        <a class="btn mono" href="https://mllab.unist.ac.kr/" target="_blank" rel="noreferrer">↗ Visit MLIC</a>
-        <a class="btn mono" href="https://github.com/famouskawon/MLIC_roadmap/" target="_blank" rel="noreferrer">⚙️ Edit this site</a>
+        <!-- id 복구(스크립트에서 참조) + 기본 href도 넣어둠 -->
+        <a class="btn mono" id="repoBtn" href="https://github.com/famouskawon/MLIC_roadmap" target="_blank" rel="noreferrer">↗ GitHub 저장소</a>
+        <a class="btn mono" id="editBtn" href="https://github.com/famouskawon/MLIC_roadmap/edit/main/index.html" target="_blank" rel="noreferrer">⚙️ Edit this site</a>
+        <a class="btn mono" href="https://mllab.unist.ac.kr/" target="_blank" rel="noreferrer">🏫 Visit MLIC</a>
       </div>
-      <p class="small" style="margin-top:12px">이선우, 이가원, 배준현 작성 (20251011)</p>
+      <p class="small" style="margin-top:12px">이선우, 이가원, 배준현 작성 (2025-10-11)</p>
     </aside>
 
     <main class="main">
@@ -93,9 +95,9 @@
   </div>
 
   <script>
-  // ====== 간단 설정 ======
-  const OWNER_NAME = "your-name"; // 깃허브 유저명
-  const REPO_NAME  = "mlic-rl-roadmap"; // 저장소명
+  // ====== 간단 설정(네 계정/레포로 기본값 세팅) ======
+  const OWNER_NAME = "famouskawon";          // 깃허브 유저명
+  const REPO_NAME  = "MLIC_roadmap";         // 저장소명
   const OWNER_URL  = `https://github.com/${OWNER_NAME}`;
   const REPO_URL   = `https://github.com/${OWNER_NAME}/${REPO_NAME}`;
 
@@ -110,7 +112,7 @@
     { id: 'schedule',label: '1년 타임라인' }
   ];
 
-  // ====== 페이지 콘텐츠 데이터 (필요시 이 블록만 수정하세요) ======
+  // ====== 페이지 콘텐츠 데이터 ======
   const DATA = {
     overview: {
       intro: `UNIST MLIC 신입생·인턴을 위한 1년 로드맵입니다. 각 단계는 명확한 학습 목표와 검증 기준을 포함하며,\n실습 중심으로 빠르게 기본기를 다진 뒤 연구에 착수하도록 설계했습니다.`,
@@ -124,8 +126,8 @@
       title: '기초 공부 1 — MDP · MC/TD · Tabular Control (월 1–2)',
       goals: [
         'MDP, 반환(Return), 정책/가치, 벨만 방정식 개념 확립',
-        'Monte‑Carlo / Temporal‑Difference 비교와 수식 유도',
-        'Tabular SARSA / Q‑Learning 구현 및 수렴 경험'
+        'Monte-Carlo / Temporal-Difference 비교와 수식 유도',
+        'Tabular SARSA / Q-Learning 구현 및 수렴 경험'
       ],
       lectures: [
         {name:'Sutton & Barto 2e Ch.1–6', link:'#'},
@@ -133,12 +135,12 @@
         {name:'UCL RL(MP/DP, MC/TD)', link:'#'}
       ],
       papers: [
-        {name:'Watkins & Dayan (1992) Q‑Learning', link:'#'},
+        {name:'Watkins & Dayan (1992) Q-Learning', link:'#'},
         {name:'Sutton (1988) TD(λ)', link:'#'}
       ],
       exams: [
         '필기: 벨만 기대/최적 방정식 유도',
-        '구현: Gridworld 정책평가/개선, CliffWalking SARSA vs Q‑Learning 비교'
+        '구현: Gridworld 정책평가/개선, CliffWalking SARSA vs Q-Learning 비교'
       ],
       metrics: [
         'CliffWalking: 에피소드 길이·리턴 비교 그래프',
@@ -149,16 +151,16 @@
       title: '기초 공부 2 — 함수근사 · DQN · 안정화 (월 3–4)',
       goals: [
         '함수근사(신경망) 기반 가치학습 원리 이해',
-        'Replay Buffer, Target Network, ε‑greedy 스케줄링',
+        'Replay Buffer, Target Network, ε-greedy 스케줄링',
         'DQN과 Double/ Dueling/ PER의 차이와 효과'
       ],
       lectures: [
-        {name:'Spinning Up: Value‑based Methods', link:'#'},
+        {name:'Spinning Up: Value-based Methods', link:'#'},
         {name:'CleanRL: DQN 구현', link:'#'}
       ],
       papers: [
         {name:'Mnih et al. (2015) DQN', link:'#'},
-        {name:'Hasselt (2010) Double Q‑learning', link:'#'},
+        {name:'Hasselt (2010) Double Q-learning', link:'#'},
         {name:'Schaul et al. (2016) PER', link:'#'},
         {name:'Wang et al. (2016) Dueling Network', link:'#'}
       ],
@@ -167,15 +169,15 @@
         '분석: ε 스케줄·타깃 업데이트 주기·배치 크기 ablation'
       ],
       metrics: [
-        'CartPole‑v1: 100‑ep moving avg ≥ 475(시드 3+)',
-        'LunarLander‑v2: 평균 점수 ≥ 200(선택)'
+        'CartPole-v1: 100-ep moving avg ≥ 475(시드 3+)',
+        'LunarLander-v2: 평균 점수 ≥ 200(선택)'
       ]
     },
     stage3: {
-      title: '기초 공부 3 — 정책경사 · Actor‑Critic · PPO 맛보기 (월 5–6)',
+      title: '기초 공부 3 — 정책경사 · Actor-Critic · PPO 맛보기 (월 5–6)',
       goals: [
         'REINFORCE, Baseline, Advantage의 역할',
-        'Actor‑Critic(A2C/A3C) 개념 및 실습',
+        'Actor-Critic(A2C/A3C) 개념 및 실습',
         'PPO의 핵심(Clipping, GAE) 맛보기'
       ],
       lectures: [
@@ -191,8 +193,8 @@
         '보고서: PG vs DQN 비교(학습 안정성·샘플효율)'
       ],
       metrics: [
-        'CartPole‑v1: 성공률 95%+ 유지(시드 3+)',
-        'LunarLander‑v2: 평균 ≥ 180 with A2C(선택)'
+        'CartPole-v1: 성공률 95%+ 유지(시드 3+)',
+        'LunarLander-v2: 평균 ≥ 180 with A2C(선택)'
       ]
     },
     explore: {
@@ -216,8 +218,8 @@
         '재현: 선택한 알고리즘으로 2개 환경 결과 재현 + ablation 2개'
       ],
       metrics: [
-        'MuJoCo HalfCheetah‑v3: SAC 평균 리턴 논문 대비 ≥90%',
-        'Atari PongNoFrameskip‑v4: DQN ≥ +18(프레임스킵/No‑op 명시)'
+        'MuJoCo HalfCheetah-v3: SAC 평균 리턴 논문 대비 ≥90%',
+        'Atari PongNoFrameskip-v4: DQN ≥ +18(프레임스킵/No-op 명시)'
       ]
     },
     research: {
@@ -239,7 +241,7 @@
       ],
       metrics: [
         'W&B/MLflow 로깅 정착(설정·시드·결과 표준화)',
-        '재현 스크립트: README의 1‑커맨드 실행으로 결과 재현'
+        '재현 스크립트: README의 1-커맨드 실행으로 결과 재현'
       ]
     },
     schedule: {
@@ -342,11 +344,22 @@
 
   // ====== 부트스트랩 ======
   function boot(){
-    // 네비
+    // 사이드 네비
     navRender();
-    // 링크 세팅
-    document.getElementById('owner').href = OWNER_URL;
-    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 링크 세팅(방어적 적용: 요소 없으면 건너뜀)
+    const ownerEl = document.getElementById('owner');
+    if (ownerEl) ownerEl.href = OWNER_URL;
+
+    const repoEl = document.getElementById('repoBtn');
+    if (repoEl) repoEl.href = REPO_URL;
+
+    const editEl = document.getElementById('editBtn');
+    if (editEl) editEl.href = `${REPO_URL}/edit/main/index.html`;
+
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
     // 라우팅
     const onHash = ()=>{
       const id = location.hash.replace('#','') || 'overview';

@@ -1,259 +1,185 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연구 시작 - MLIC 강화학습 커리큘럼</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>연구 시작 - MLIC 강화학습 커리큘럼</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>연구 시작</h1>
-            <p class="subtitle">독립적인 연구 프로젝트 수행</p>
+  <header>
+    <div class="container">
+      <h1>연구 시작</h1>
+      <p class="subtitle">독립적인 연구 프로젝트 수행</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="stage1.html">기초 공부 1</a></li>
+        <li><a href="stage2.html">기초 공부 2</a></li>
+        <li><a href="stage3.html">기초 공부 3</a></li>
+        <li><a href="stage4.html">연구 분야 탐색</a></li>
+        <li><a href="stage5.html" class="active">연구 시작</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- 소개 -->
+    <section class="stage-header">
+      <h2>연구 시작 단계</h2>
+      <p class="period">📅 기간: 10–12개월 (37주차–52주차)</p>
+      <p>
+        원하는 분야에서 <strong>흥미로운 문제</strong>를 정의하고, <strong>아이디어 구상·구현</strong>을 통해
+        독립적인 연구 프로젝트를 수행합니다. 베이스라인을 정확히 재현하고, 점진적으로 개선안을 제안·검증합니다.
+      </p>
+    </section>
+
+    <!-- 학습/수행 목표 -->
+    <section class="content-section">
+      <h3>🎯 목표</h3>
+      <ul class="objectives-list">
+        <li><strong>연구 문제 정의:</strong> 명확한 문제 설정과 가설 수립</li>
+        <li><strong>베이스라인 확보:</strong> 관련 대표 논문 1–2편 충실 재현</li>
+        <li><strong>아이디어 구상:</strong> 한계 분석 → 개선 아이디어 도출</li>
+        <li><strong>방법 개발:</strong> 알고리즘/모듈 설계 및 구현</li>
+        <li><strong>실험/분석:</strong> 체계적 실험, 어블레이션, 통계 분석</li>
+        <li><strong>논문화:</strong> 학술 형식의 보고서/논문 초고 작성</li>
+      </ul>
+    </section>
+
+    <!-- 학습/진행 방향 -->
+    <section class="content-section">
+      <h3>🧭 진행 방향</h3>
+      <ul class="objectives-list">
+        <li><strong>베이스라인 논문 읽기</strong> — 문제정의/가정/핵심 아이디어/한계 체크리스트화</li>
+        <li><strong>문제 찾기</strong> — 실제 실패 사례, 데이터 편향, 계산/샘플 효율 등에서 Pain Point 발굴</li>
+        <li><strong>아이디어 설계</strong> — 단일 변경점(minimal change)→조합 개선 순으로 확장</li>
+        <li><strong>실험 루틴</strong> — 시드 ≥5, 공정 비교, 재현 가능한 코드/로그/설정 공유</li>
+        <li><strong>리뷰 루프</strong> — 주간 미팅으로 가설 검증·피드백 반영</li>
+      </ul>
+    </section>
+
+    <!-- 연구 프로세스 -->
+    <section class="content-section">
+      <h3>📋 연구 프로세스</h3>
+      <div class="evaluation-grid">
+        <div class="eval-item">
+          <h4>1️⃣ 문제 정의</h4>
+          <p><strong>활동:</strong> 문헌 검토, 한계 파악, 연구 질문·가설 수립</p>
+          <p><strong>산출물:</strong> Problem Statement 1p, 초기 로드맵</p>
         </div>
-    </header>
-
-    <nav class="main-nav">
-        <div class="container">
-            <ul>
-                <li><a href="index.html">홈</a></li>
-                <li><a href="stage1.html">기초 공부 1</a></li>
-                <li><a href="stage2.html">기초 공부 2</a></li>
-                <li><a href="stage3.html">기초 공부 3</a></li>
-                <li><a href="stage4.html">연구 분야 탐색</a></li>
-                <li><a href="stage5.html" class="active">연구 시작</a></li>
-            </ul>
+        <div class="eval-item">
+          <h4>2️⃣ 베이스라인 재현</h4>
+          <p><strong>활동:</strong> 코드 획득·클린업, 메트릭/환경 정합성 확인</p>
+          <p><strong>산출물:</strong> 재현 리포트(성능·설정·이슈)</p>
         </div>
-    </nav>
-
-    <main class="container">
-        <section class="stage-header">
-            <h2>연구 시작 단계</h2>
-            <p class="period">📅 학습 기간: 10-12개월 (37주차 - 52주차)</p>
-            <p>독립적인 연구 프로젝트를 설계하고 수행하며, 학술 논문 작성을 시작합니다.</p>
-        </section>
-
-        <section class="content-section">
-            <h3>🎯 학습 목표</h3>
-            <ul class="objectives-list">
-                <li><strong>연구 문제 정의:</strong> 명확한 연구 질문과 가설 수립</li>
-                <li><strong>실험 설계:</strong> 체계적인 실험 프로토콜 및 벤치마크 설정</li>
-                <li><strong>알고리즘 개발:</strong> 새로운 방법론 제안 또는 기존 방법 개선</li>
-                <li><strong>실험 수행:</strong> 대규모 실험 진행 및 결과 분석</li>
-                <li><strong>논문 작성:</strong> 학술 논문 형식의 연구 결과 정리</li>
-                <li><strong>학회 제출:</strong> 주요 학회에 논문 제출 준비</li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h3>📋 연구 프로세스</h3>
-            <div class="evaluation-grid">
-                <div class="eval-item">
-                    <h4>1️⃣ 문제 정의</h4>
-                    <p><strong>활동:</strong> 기존 연구의 한계점 파악, 연구 질문 수립</p>
-                    <p><strong>산출물:</strong> Research Proposal 최종본</p>
-                </div>
-                <div class="eval-item">
-                    <h4>2️⃣ 문헌 조사</h4>
-                    <p><strong>활동:</strong> 관련 연구 심층 분석, Related Work 정리</p>
-                    <p><strong>산출물:</strong> Annotated Bibliography</p>
-                </div>
-                <div class="eval-item">
-                    <h4>3️⃣ 방법론 설계</h4>
-                    <p><strong>활동:</strong> 알고리즘 설계, 이론적 분석</p>
-                    <p><strong>산출물:</strong> Algorithm Pseudocode, 수학적 증명</p>
-                </div>
-                <div class="eval-item">
-                    <h4>4️⃣ 구현</h4>
-                    <p><strong>활동:</strong> 코드 작성, 디버깅, 최적화</p>
-                    <p><strong>산출물:</strong> 재현 가능한 코드베이스</p>
-                </div>
-                <div class="eval-item">
-                    <h4>5️⃣ 실험</h4>
-                    <p><strong>활동:</strong> 다양한 환경에서 실험, Ablation study</p>
-                    <p><strong>산출물:</strong> 실험 결과 데이터 및 그래프</p>
-                </div>
-                <div class="eval-item">
-                    <h4>6️⃣ 분석</h4>
-                    <p><strong>활동:</strong> 결과 해석, 실패 사례 분석</p>
-                    <p><strong>산출물:</strong> 결과 분석 보고서</p>
-                </div>
-                <div class="eval-item">
-                    <h4>7️⃣ 논문 작성</h4>
-                    <p><strong>활동:</strong> Introduction, Method, Results, Discussion 작성</p>
-                    <p><strong>산출물:</strong> 논문 초고</p>
-                </div>
-                <div class="eval-item">
-                    <h4>8️⃣ 피드백 & 개선</h4>
-                    <p><strong>활동:</strong> 지도교수/동료 리뷰, 수정 및 보완</p>
-                    <p><strong>산출물:</strong> 최종 논문</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <h3>📚 논문 작성 가이드</h3>
-            <ul class="materials-list">
-                <li>
-                    <strong>📖 How to Write a Good Scientific Paper (Chris Mack)</strong><br>
-                    과학 논문 작성의 기본 원칙
-                </li>
-                <li>
-                    <strong>📖 Writing for Computer Science (Justin Zobel)</strong><br>
-                    컴퓨터 과학 논문 작성 가이드
-                </li>
-                <li>
-                    <strong>📹 How to Write a Great Research Paper (Simon Peyton Jones)</strong><br>
-                    <a href="https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/" target="_blank">Microsoft Research 강연</a>
-                </li>
-                <li>
-                    <strong>📖 LaTeX 및 Overleaf 사용법</strong><br>
-                    <a href="https://www.overleaf.com/learn" target="_blank">overleaf.com/learn</a><br>
-                    논문 작성 도구 활용
-                </li>
-                <li>
-                    <strong>📊 Plotting 및 시각화</strong><br>
-                    Matplotlib, Seaborn, TensorBoard 활용 가이드
-                </li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h3>🛠️ 연구 도구 및 리소스</h3>
-            <ul class="materials-list">
-                <li>
-                    <strong>💻 실험 관리 도구</strong><br>
-                    <a href="https://wandb.ai/" target="_blank">Weights & Biases</a>, 
-                    <a href="https://neptune.ai/" target="_blank">Neptune.ai</a><br>
-                    실험 추적 및 결과 관리
-                </li>
-                <li>
-                    <strong>📊 벤치마크 환경</strong><br>
-                    <a href="https://www.gymlibrary.dev/" target="_blank">OpenAI Gym</a>, 
-                    <a href="https://github.com/deepmind/dm_control" target="_blank">DeepMind Control Suite</a>,
-                    <a href="https://github.com/openai/procgen" target="_blank">Procgen</a><br>
-                    표준 벤치마크 환경
-                </li>
-                <li>
-                    <strong>🖥️ 컴퓨팅 리소스</strong><br>
-                    연구실 GPU 서버, Google Colab Pro, AWS/GCP 크레딧 활용
-                </li>
-                <li>
-                    <strong>📚 논문 관리</strong><br>
-                    <a href="https://www.zotero.org/" target="_blank">Zotero</a>, 
-                    <a href="https://www.mendeley.com/" target="_blank">Mendeley</a><br>
-                    참고문헌 관리 도구
-                </li>
-                <li>
-                    <strong>💬 커뮤니티</strong><br>
-                    <a href="https://www.reddit.com/r/reinforcementlearning/" target="_blank">r/reinforcementlearning</a>,
-                    <a href="https://github.com/" target="_blank">GitHub Discussions</a><br>
-                    연구 아이디어 공유 및 토론
-                </li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h3>📄 참고할 만한 최근 연구 사례</h3>
-            <ul class="papers-list">
-                <li>
-                    <strong>Decision Transformer: Reinforcement Learning via Sequence Modeling</strong><br>
-                    Chen et al., NeurIPS 2021<br>
-                    <a href="https://arxiv.org/abs/2106.01345" target="_blank">arXiv:2106.01345</a><br>
-                    새로운 패러다임 제시: RL을 Sequence Modeling으로 접근
-                </li>
-                <li>
-                    <strong>Mastering the Game of Go without Human Knowledge</strong><br>
-                    Silver et al., Nature 2017 (AlphaGo Zero)<br>
-                    <a href="https://www.nature.com/articles/nature24270" target="_blank">Nature Paper</a><br>
-                    완전한 Self-Play 기반 학습
-                </li>
-                <li>
-                    <strong>Grandmaster level in StarCraft II using multi-agent RL</strong><br>
-                    Vinyals et al., Nature 2019 (AlphaStar)<br>
-                    <a href="https://www.nature.com/articles/s41586-019-1724-z" target="_blank">Nature Paper</a><br>
-                    복잡한 실시간 전략 게임 정복
-                </li>
-                <li>
-                    <strong>Solving Rubik's Cube with a Robot Hand</strong><br>
-                    OpenAI et al., 2019<br>
-                    <a href="https://arxiv.org/abs/1910.07113" target="_blank">arXiv:1910.07113</a><br>
-                    Sim-to-Real Transfer 및 로봇 제어
-                </li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h3>✅ 평가 및 마일스톤</h3>
-            <div class="evaluation-grid">
-                <div class="eval-item">
-                    <h4>📋 Research Proposal 발표</h4>
-                    <p><strong>시기:</strong> 37주차</p>
-                    <p><strong>기준:</strong> 명확한 문제 정의, 방법론, 예상 기여도</p>
-                </div>
-                <div class="eval-item">
-                    <h4>💻 Proof of Concept</h4>
-                    <p><strong>시기:</strong> 42주차</p>
-                    <p><strong>기준:</strong> 기본 구현 완료 및 초기 결과</p>
-                </div>
-                <div class="eval-item">
-                    <h4>📊 중간 발표</h4>
-                    <p><strong>시기:</strong> 46주차</p>
-                    <p><strong>기준:</strong> 주요 실험 결과 및 분석</p>
-                </div>
-                <div class="eval-item">
-                    <h4>📝 논문 초고</h4>
-                    <p><strong>시기:</strong> 50주차</p>
-                    <p><strong>기준:</strong> 전체 섹션 완성 (Abstract~Conclusion)</p>
-                </div>
-                <div class="eval-item">
-                    <h4>🎯 최종 발표</h4>
-                    <p><strong>시기:</strong> 52주차</p>
-                    <p><strong>기준:</strong> 1년간의 연구 성과 종합 발표</p>
-                </div>
-                <div class="eval-item">
-                    <h4>📄 학회 제출 준비</h4>
-                    <p><strong>시기:</strong> 52주차 이후</p>
-                    <p><strong>기준:</strong> NeurIPS, ICML, ICLR 등 주요 학회 제출 수준</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <h3>💡 주간 활동 계획</h3>
-            <ul class="objectives-list">
-                <li><strong>37-38주차:</strong> 연구 문제 정의 및 Proposal 작성, 발표</li>
-                <li><strong>39-40주차:</strong> 심층 문헌 조사 및 Related Work 정리</li>
-                <li><strong>41-44주차:</strong> 알고리즘 설계 및 구현, Proof of Concept</li>
-                <li><strong>45-48주차:</strong> 본격적인 실험 수행 및 결과 분석</li>
-                <li><strong>49-50주차:</strong> Ablation study 및 추가 실험, 논문 초고 작성</li>
-                <li><strong>51주차:</strong> 논문 수정 및 보완, 그래프 및 표 완성</li>
-                <li><strong>52주차:</strong> 최종 발표 및 1년 커리큘럼 완료 평가</li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h3>🎓 졸업 후 진로</h3>
-            <ul class="objectives-list">
-                <li><strong>박사 과정 진학:</strong> 연구를 계속 심화하여 Top-tier 학회 논문 출판</li>
-                <li><strong>산업계 Research Engineer:</strong> Google DeepMind, OpenAI, Meta AI 등</li>
-                <li><strong>스타트업:</strong> AI/RL 기반 스타트업 창업 또는 합류</li>
-                <li><strong>연구소:</strong> ETRI, KIST 등 정부출연 연구소</li>
-                <li><strong>기업 연구소:</strong> 삼성, LG, 네이버, 카카오 등 AI Lab</li>
-            </ul>
-        </section>
-
-        <div class="nav-buttons">
-            <a href="stage4.html" class="btn btn-prev">← 이전: 연구 분야 탐색</a>
-            <a href="index.html" class="btn">홈으로 돌아가기 →</a>
+        <div class="eval-item">
+          <h4>3️⃣ 방법 설계</h4>
+          <p><strong>활동:</strong> 알고리즘/모듈 설계, 복잡도·자원 추산</p>
+          <p><strong>산출물:</strong> Pseudocode, 실험 계획표</p>
         </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 UNIST MLIC Lab. All rights reserved.</p>
+        <div class="eval-item">
+          <h4>4️⃣ 구현</h4>
+          <p><strong>활동:</strong> 모델/훈련 루프/로깅/평가 파이프라인 구축</p>
+          <p><strong>산출물:</strong> 재현 가능한 코드베이스</p>
         </div>
-    </footer>
+        <div class="eval-item">
+          <h4>5️⃣ 실험</h4>
+          <p><strong>활동:</strong> 메인·어블레이션·하이퍼스윕</p>
+          <p><strong>산출물:</strong> 결과 표/그래프, 로그 아카이브</p>
+        </div>
+        <div class="eval-item">
+          <h4>6️⃣ 분석</h4>
+          <p><strong>활동:</strong> 통계 검증, 실패 케이스/한계 분석</p>
+          <p><strong>산출물:</strong> 분석 노트·결론 정리</p>
+        </div>
+        <div class="eval-item">
+          <h4>7️⃣ 논문 작성</h4>
+          <p><strong>활동:</strong> Intro/Related/Method/Exp/Discussion 작성</p>
+          <p><strong>산출물:</strong> 논문 초고</p>
+        </div>
+        <div class="eval-item">
+          <h4>8️⃣ 피드백 & 개선</h4>
+          <p><strong>활동:</strong> 지도교수/동료 리뷰 반영</p>
+          <p><strong>산출물:</strong> 카메라레디 초안</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 연구실 노하우 (플레이스홀더) -->
+    <section class="content-section">
+      <h3>🛠️ 연구실 노하우</h3>
+      <ul class="materials-list">
+        <li><strong>논문 작성 노하우</strong> — <span class="muted">(연구실 구성원 팁 추가 예정)</span></li>
+        <li><strong>아이디어 발굴 & 실험 요령</strong> — <span class="muted">(연구실 구성원 팁 추가 예정)</span></li>
+      </ul>
+    </section>
+
+    <!-- 도구 & 리소스 -->
+    <section class="content-section">
+      <h3>🧰 도구 & 리소스</h3>
+      <ul class="materials-list">
+        <li><strong>실험 추적:</strong> <a href="https://wandb.ai/" target="_blank">Weights &amp; Biases</a>, <a href="https://neptune.ai/" target="_blank">Neptune</a></li>
+        <li><strong>벤치마크:</strong> <a href="https://www.gymlibrary.dev/" target="_blank">Gym</a>, <a href="https://github.com/deepmind/dm_control" target="_blank">dm_control</a>, <a href="https://github.com/openai/procgen" target="_blank">Procgen</a></li>
+        <li><strong>논문·참고:</strong> <a href="https://www.overleaf.com/learn" target="_blank">Overleaf</a>, <a href="https://www.zotero.org/" target="_blank">Zotero</a>, <a href="https://www.mendeley.com/" target="_blank">Mendeley</a></li>
+      </ul>
+    </section>
+
+    <!-- 평가/마일스톤 -->
+    <section class="content-section">
+      <h3>✅ 검증 및 마일스톤</h3>
+      <div class="evaluation-grid">
+        <div class="eval-item">
+          <h4>📋 문제·아이디어</h4>
+          <p><strong>내용:</strong> 문제 정의, 가설·아이디어 명세</p>
+          <p><strong>기준:</strong> 구체성/신규성/실현가능성</p>
+        </div>
+        <div class="eval-item">
+          <h4>💻 구현 & 실험</h4>
+          <p><strong>내용:</strong> 베이스라인 재현, 개선안 구현·어블레이션</p>
+          <p><strong>기준:</strong> 재현성·통계적 유의성</p>
+        </div>
+        <div class="eval-item">
+          <h4>👥 연구 미팅</h4>
+          <p><strong>내용:</strong> 교수님/동료와 정기 리뷰</p>
+          <p><strong>기준:</strong> 피드백 반영 내역·로드맵 업데이트</p>
+        </div>
+        <div class="eval-item">
+          <h4>📝 논문 초고</h4>
+          <p><strong>내용:</strong> 학술 형식의 초고 제출</p>
+          <p><strong>기준:</strong> 구성 완비(초록~결론), 그림·표·부록</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 주간 활동 계획 -->
+    <section class="content-section">
+      <h3>💡 주간 활동 계획</h3>
+      <ul class="objectives-list">
+        <li><strong>37–38주차:</strong> 문제 정의·Proposal 작성/발표</li>
+        <li><strong>39–40주차:</strong> 심층 문헌조사·Related Work 정리</li>
+        <li><strong>41–44주차:</strong> 아이디어 설계·구현, Proof of Concept</li>
+        <li><strong>45–48주차:</strong> 메인 실험·어블레이션·로그 정리</li>
+        <li><strong>49–50주차:</strong> 추가 실험·그래프/표 완성, 논문 초고</li>
+        <li><strong>51주차:</strong> 리뷰 반영, 카메라레디 초안</li>
+        <li><strong>52주차:</strong> 최종 발표·커리큘럼 종료 평가</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="stage4.html" class="btn btn-prev">← 이전: 연구 분야 탐색</a>
+      <a href="index.html" class="btn">홈으로 돌아가기 →</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 UNIST MLIC Lab. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

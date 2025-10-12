@@ -1,172 +1,171 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>기초 공부 3 - MLIC 강화학습 커리큘럼</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>기초 공부 3 - MLIC 강화학습 커리큘럼</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>기초 공부 3</h1>
-            <p class="subtitle">고급 강화학습 및 실습</p>
+  <header>
+    <div class="container">
+      <h1>기초 공부 3</h1>
+      <p class="subtitle">고급 강화학습 · Policy Gradient · 실전 환경</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="stage1.html">기초 공부 1</a></li>
+        <li><a href="stage2.html">기초 공부 2</a></li>
+        <li><a href="stage3.html" class="active">기초 공부 3</a></li>
+        <li><a href="stage4.html">연구 분야 탐색</a></li>
+        <li><a href="stage5.html">연구 시작</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- 소개 -->
+    <section class="stage-header">
+      <h2>기초 공부 3단계</h2>
+      <p class="period">📅 학습 기간: 5–6개월 (17주차–24주차)</p>
+      <p>
+        <strong>목표:</strong> 딥러닝의 발전과 함께 <em>neural network</em>가 결합된 <strong>Deep RL</strong>이 활발히 연구되고 있습니다.
+        본 단계에서는 Deep RL의 핵심 알고리즘과 Policy Gradient 계열을 체계적으로 학습하고, 복잡한 환경(MuJoCo, Atari 등)에서 실습합니다.
+      </p>
+    </section>
+
+    <!-- 학습 방향 -->
+    <section class="content-section">
+      <h3>🧭 학습 방향</h3>
+      <ul class="objectives-list">
+        <li>핵심 카테고리: <strong>DQN 계열(value-based)</strong>과 <strong>Policy Gradient 계열</strong>(확률/결정적, 최대 엔트로피).</li>
+        <li>대부분의 논문은 기존 알고리즘의 <em>개선</em>입니다. 다음 포인트에 집중해 읽고 구현하세요:
+          <ol>
+            <li>(i) 기존 방법의 <strong>문제점</strong> 식별</li>
+            <li>(ii) 제안하는 <strong>해결 아이디어</strong>와 메커니즘</li>
+            <li>(iii) <strong>이론/실험</strong> 근거(수식·증명·어블레이션)</li>
+            <li>(iv) <strong>구현체</strong>와 하이퍼파라미터, 재현성</li>
+          </ol>
+        </li>
+      </ul>
+    </section>
+
+    <!-- DQN 계열 -->
+    <section class="content-section">
+      <h3>🧩 DQN-based Methods</h3>
+      <ul class="materials-list">
+        <li><strong>DQN</strong> — <em>Playing Atari with Deep Reinforcement Learning</em>, Mnih et al., 2013 (arXiv:1312.5602)</li>
+        <li><strong>DQN (Nature)</strong> — <em>Human-level control through deep reinforcement learning</em>, Mnih et al., 2015</li>
+        <li><strong>DRQN</strong> — <em>Deep Recurrent Q-Learning for POMDPs</em>, Hausknecht & Stone, 2015</li>
+        <li><strong>Dueling DQN</strong> — <em>Dueling Network Architectures for Deep RL</em>, Wang et al., 2016</li>
+        <li><strong>Double DQN</strong> — van Hasselt et al., 2016</li>
+        <li><strong>Prioritized Experience Replay (PER)</strong> — Schaul et al., 2016</li>
+        <li><strong>Rainbow DQN</strong> — Hessel et al., 2018</li>
+        <li><strong>GAE</strong> — <em>High-Dimensional Continuous Control with Generalized Advantage Estimation</em>, Schulman et al., 2016</li>
+        <li><strong>TD3</strong> — <em>Addressing Function Approximation Error in Actor-Critic Methods</em>, Fujimoto et al., 2018</li>
+      </ul>
+      <p class="muted">※ GAE는 정책기반에서 자주 쓰이지만, 가치추정 안정화 관점에서 함께 묶어 참고합니다.</p>
+    </section>
+
+    <!-- Policy Gradient (Stochastic) -->
+    <section class="content-section">
+      <h3>🎯 Policy Gradient (Stochastic)</h3>
+      <ul class="materials-list">
+        <li><strong>REINFORCE</strong> — Sutton &amp; Barto 교재 Ch.13 기반</li>
+        <li><strong>A3C / A2C</strong> — <em>Asynchronous Methods for Deep RL</em>, Mnih et al., 2016 (A3C) / 동기화 변형(A2C)</li>
+        <li><strong>TRPO</strong> — <em>Trust Region Policy Optimization</em>, Schulman et al., 2015</li>
+        <li><strong>NPG</strong> (선택) — <em>A Natural Policy Gradient</em>, Kakade, 2001</li>
+        <li><strong>PPO</strong> — <em>Proximal Policy Optimization Algorithms</em>, Schulman et al., 2017</li>
+      </ul>
+    </section>
+
+    <!-- Policy Gradient (Deterministic) -->
+    <section class="content-section">
+      <h3>⚙️ Policy Gradient (Deterministic)</h3>
+      <ul class="materials-list">
+        <li><strong>DPG</strong> — <em>Deterministic Policy Gradient Algorithms</em>, Silver et al., 2014/2015</li>
+        <li><strong>Off-Policy Actor-Critic</strong> (선택) — Degris et al., 2012</li>
+        <li><strong>DDPG</strong> — <em>Continuous Control with Deep RL</em>, Lillicrap et al., 2016</li>
+      </ul>
+    </section>
+
+    <!-- Maximum Entropy RL -->
+    <section class="content-section">
+      <h3>🌡️ Maximum Entropy Reinforcement Learning</h3>
+      <ul class="materials-list">
+        <li><strong>Soft Q-Learning</strong> (선택·중요) — <em>RL with Deep Energy-Based Policies</em>, Haarnoja et al., 2017</li>
+        <li><strong>SAC</strong> — <em>Soft Actor-Critic: Off-Policy Max-Ent Deep RL with a Stochastic Actor</em>, Haarnoja et al., 2018</li>
+      </ul>
+    </section>
+
+    <!-- 참고 강의/자료 -->
+    <section class="content-section">
+      <h3>📚 강의 & 도구</h3>
+      <ul class="materials-list">
+        <li><strong>Sutton &amp; Barto — RL: An Introduction</strong> (Ch.7–13 심화)</li>
+        <li><strong>David Silver’s RL Course</strong> — Policy Gradient, Actor-Critic 파트</li>
+        <li><strong>CS285 (Berkeley)</strong> — 심화 주제(Policy Gradient, Model-Based RL)</li>
+        <li><strong>OpenAI Spinning Up</strong> — PPO/SAC 구현 가이드</li>
+        <li><strong>MuJoCo / Atari</strong> — 고난이도 벤치마크 환경 실습</li>
+      </ul>
+    </section>
+
+    <!-- 평가 기준 -->
+    <section class="content-section">
+      <h3>✅ 시험 및 성능 기준</h3>
+      <div class="evaluation-grid">
+        <div class="eval-item">
+          <h4>📝 논문 리뷰</h4>
+          <p><strong>내용:</strong> PPO, SAC 등 핵심 논문 발표·Q&A</p>
+          <p><strong>기준:</strong> 핵심 아이디어/수식/한계 명확 설명</p>
         </div>
-    </header>
-
-    <nav class="main-nav">
-        <div class="container">
-            <ul>
-                <li><a href="index.html">홈</a></li>
-                <li><a href="stage1.html">기초 공부 1</a></li>
-                <li><a href="stage2.html">기초 공부 2</a></li>
-                <li><a href="stage3.html" class="active">기초 공부 3</a></li>
-                <li><a href="stage4.html">연구 분야 탐색</a></li>
-                <li><a href="stage5.html">연구 시작</a></li>
-            </ul>
+        <div class="eval-item">
+          <h4>💻 알고리즘 구현</h4>
+          <p><strong>내용:</strong> PPO 또는 SAC 직접 구현</p>
+          <p><strong>기준:</strong> 공개 baseline 대비 동급 성능 달성</p>
         </div>
-    </nav>
-
-    <main class="container">
-        <section class="stage-header">
-            <h2>기초 공부 3단계</h2>
-            <p class="period">📅 학습 기간: 5-6개월 (17주차 - 24주차)</p>
-            <p>Deep RL의 고급 알고리즘들과 Policy Gradient 방법론을 학습하고, 복잡한 환경에서 실습합니다.</p>
-        </section>
-
-        <section class="content-section">
-            <h3>🎯 학습 목표</h3>
-            <ul class="objectives-list">
-                <li><strong>Policy Gradient 이해:</strong> REINFORCE, Actor-Critic 알고리즘의 이론과 구현</li>
-                <li><strong>고급 DQN 변형:</strong> Rainbow DQN, Distributional RL 학습</li>
-                <li><strong>PPO & TRPO:</strong> 현대 RL의 핵심 알고리즘 이해 및 구현</li>
-                <li><strong>A3C & SAC:</strong> 비동기 학습과 Maximum Entropy RL</li>
-                <li><strong>Model-Based RL:</strong> World Model, Planning 기법 이해</li>
-                <li><strong>복잡한 환경 해결:</strong> MuJoCo, Atari 등 고난이도 환경에서 실험</li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h3>📚 강의 자료</h3>
-            <ul class="materials-list">
-                <li>
-                    <strong>📖 Reinforcement Learning: An Introduction (Sutton & Barto)</strong><br>
-                    <a href="http://incompleteideas.net/book/the-book-2nd.html" target="_blank">incompleteideas.net/book</a><br>
-                    Chapter 7-13: Advanced Topics
-                </li>
-                <li>
-                    <strong>📹 David Silver's RL Course (DeepMind)</strong><br>
-                    <a href="https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ" target="_blank">YouTube Playlist</a><br>
-                    Lecture 6-10: Policy Gradient, Actor-Critic
-                </li>
-                <li>
-                    <strong>📹 CS285: Deep Reinforcement Learning (UC Berkeley)</strong><br>
-                    <a href="http://rail.eecs.berkeley.edu/deeprlcourse/" target="_blank">rail.eecs.berkeley.edu/deeprlcourse</a><br>
-                    Advanced Lectures on Policy Gradient and Model-Based RL
-                </li>
-                <li>
-                    <strong>💻 OpenAI Spinning Up in Deep RL</strong><br>
-                    <a href="https://spinningup.openai.com/" target="_blank">spinningup.openai.com</a><br>
-                    고급 RL 알고리즘 구현 가이드 및 코드
-                </li>
-                <li>
-                    <strong>📖 Deep Reinforcement Learning Hands-On (Maxim Lapan)</strong><br>
-                    실전 Deep RL 구현 예제 모음
-                </li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h3>📄 참고 논문</h3>
-            <ul class="papers-list">
-                <li>
-                    <strong>Policy Gradient Methods for Reinforcement Learning</strong><br>
-                    Sutton et al., NeurIPS 2000<br>
-                    <a href="https://papers.nips.cc/paper/1713-policy-gradient-methods-for-reinforcement-learning-with-function-approximation" target="_blank">Paper Link</a>
-                </li>
-                <li>
-                    <strong>Asynchronous Methods for Deep Reinforcement Learning</strong><br>
-                    Mnih et al., ICML 2016 (A3C)<br>
-                    <a href="https://arxiv.org/abs/1602.01783" target="_blank">arXiv:1602.01783</a>
-                </li>
-                <li>
-                    <strong>Trust Region Policy Optimization</strong><br>
-                    Schulman et al., ICML 2015 (TRPO)<br>
-                    <a href="https://arxiv.org/abs/1502.05477" target="_blank">arXiv:1502.05477</a>
-                </li>
-                <li>
-                    <strong>Proximal Policy Optimization Algorithms</strong><br>
-                    Schulman et al., 2017 (PPO)<br>
-                    <a href="https://arxiv.org/abs/1707.06347" target="_blank">arXiv:1707.06347</a>
-                </li>
-                <li>
-                    <strong>Soft Actor-Critic: Off-Policy Maximum Entropy Deep RL</strong><br>
-                    Haarnoja et al., ICML 2018 (SAC)<br>
-                    <a href="https://arxiv.org/abs/1801.01290" target="_blank">arXiv:1801.01290</a>
-                </li>
-                <li>
-                    <strong>Rainbow: Combining Improvements in Deep RL</strong><br>
-                    Hessel et al., AAAI 2018<br>
-                    <a href="https://arxiv.org/abs/1710.02298" target="_blank">arXiv:1710.02298</a>
-                </li>
-                <li>
-                    <strong>World Models</strong><br>
-                    Ha & Schmidhuber, NeurIPS 2018<br>
-                    <a href="https://arxiv.org/abs/1803.10122" target="_blank">arXiv:1803.10122</a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h3>✅ 시험 및 성능 기준</h3>
-            <div class="evaluation-grid">
-                <div class="eval-item">
-                    <h4>📝 논문 리뷰</h4>
-                    <p><strong>내용:</strong> PPO, SAC 등 주요 논문 발표 및 질의응답</p>
-                    <p><strong>통과 기준:</strong> 알고리즘의 핵심 아이디어와 수식 명확히 설명</p>
-                </div>
-                <div class="eval-item">
-                    <h4>💻 알고리즘 구현</h4>
-                    <p><strong>내용:</strong> PPO 또는 SAC 직접 구현</p>
-                    <p><strong>통과 기준:</strong> 벤치마크 환경에서 baseline 성능 달성</p>
-                </div>
-                <div class="eval-item">
-                    <h4>🎮 복잡한 환경 해결</h4>
-                    <p><strong>내용:</strong> MuJoCo 또는 Atari 게임 학습</p>
-                    <p><strong>통과 기준:</strong> HalfCheetah-v2에서 4000 이상 reward 또는 Atari 게임 인간 수준 달성</p>
-                </div>
-                <div class="eval-item">
-                    <h4>📊 종합 프로젝트</h4>
-                    <p><strong>내용:</strong> 알고리즘 비교 실험 및 논문 형식 보고서</p>
-                    <p><strong>통과 기준:</strong> 체계적인 실험, 명확한 결과 분석 및 통찰</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <h3>💡 주간 학습 계획</h3>
-            <ul class="objectives-list">
-                <li><strong>17주차:</strong> Policy Gradient 이론 및 REINFORCE 구현</li>
-                <li><strong>18주차:</strong> Actor-Critic 방법론 (A2C, A3C)</li>
-                <li><strong>19주차:</strong> Trust Region Policy Optimization (TRPO)</li>
-                <li><strong>20주차:</strong> Proximal Policy Optimization (PPO)</li>
-                <li><strong>21주차:</strong> Soft Actor-Critic (SAC) 및 Maximum Entropy RL</li>
-                <li><strong>22주차:</strong> Rainbow DQN 및 Distributional RL</li>
-                <li><strong>23주차:</strong> Model-Based RL 및 Planning</li>
-                <li><strong>24주차:</strong> 종합 프로젝트 수행 및 발표</li>
-            </ul>
-        </section>
-
-        <div class="nav-buttons">
-            <a href="stage2.html" class="btn btn-prev">← 이전: 기초 공부 2</a>
-            <a href="stage4.html" class="btn">다음 단계: 연구 분야 탐색 →</a>
+        <div class="eval-item">
+          <h4>🎮 복잡한 환경 해결</h4>
+          <p><strong>내용:</strong> MuJoCo 또는 Atari 실험</p>
+          <p><strong>기준:</strong> HalfCheetah-v2 ≥ 4000 또는 선택 Atari 인간 수준</p>
         </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 UNIST MLIC Lab. All rights reserved.</p>
+        <div class="eval-item">
+          <h4>📊 종합 프로젝트</h4>
+          <p><strong>내용:</strong> 비교 실험·어블레이션·논문 형식 보고서</p>
+          <p><strong>기준:</strong> 재현 가능한 설계와 명확한 통찰</p>
         </div>
-    </footer>
+      </div>
+    </section>
+
+    <!-- 주간 학습 계획 -->
+    <section class="content-section">
+      <h3>💡 주간 학습 계획</h3>
+      <ul class="objectives-list">
+        <li><strong>17주차:</strong> Policy Gradient 이론 · REINFORCE 구현</li>
+        <li><strong>18주차:</strong> Actor-Critic (A2C/A3C) · Advantage 추정</li>
+        <li><strong>19주차:</strong> TRPO · 자연그래디언트 직관 · 신뢰영역</li>
+        <li><strong>20주차:</strong> PPO · 클리핑·KL 페널티 변형 비교</li>
+        <li><strong>21주차:</strong> SAC · Max-Ent 원리 · 온도/알파 튜닝</li>
+        <li><strong>22주차:</strong> Rainbow/Distributional RL · C51/QR-DQN 개념</li>
+        <li><strong>23주차:</strong> Model-Based RL · Planning(모델/월드모델)</li>
+        <li><strong>24주차:</strong> 종합 프로젝트 · 결과 발표</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="stage2.html" class="btn btn-prev">← 이전: 기초 공부 2</a>
+      <a href="stage4.html" class="btn">다음 단계: 연구 분야 탐색 →</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 UNIST MLIC Lab. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

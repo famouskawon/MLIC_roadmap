@@ -1,163 +1,172 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>기초 공부 2 - MLIC 강화학습 커리큘럼</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>기초 공부 2 - MLIC 강화학습 커리큘럼</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>기초 공부 2</h1>
-            <p class="subtitle">강화학습 이론 및 알고리즘</p>
+  <header>
+    <div class="container">
+      <h1>기초 공부 2</h1>
+      <p class="subtitle">강화학습 이론 · 고전 알고리즘 · 기본기 다지기</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">홈</a></li>
+        <li><a href="stage1.html">기초 공부 1</a></li>
+        <li><a href="stage2.html" class="active">기초 공부 2</a></li>
+        <li><a href="stage3.html">기초 공부 3</a></li>
+        <li><a href="stage4.html">연구 분야 탐색</a></li>
+        <li><a href="stage5.html">연구 시작</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- 소개 -->
+    <section class="stage-header">
+      <h2>기초 공부 2단계</h2>
+      <p class="period">📅 학습 기간: 3–4개월 (9주차–16주차)</p>
+      <p><strong>목표:</strong> 강화학습의 토대를 <em>근본적으로</em> 이해하여 이후 Deep RL 연구를 위한 단단한 기반을 마련한다.</p>
+      <p class="muted">
+        현재 강화학습의 주류는 신경망을 활용한 Deep RL이지만, 그 이전에 축적된
+        <strong>수학적·이론적</strong> 기반(기본형 RL)을 먼저 체계적으로 익히는 것이 중요합니다.
+        본 단계에서는 <em>Sutton &amp; Barto</em> 교재로 기본기를 다지고, <em>David Silver</em> 강의로
+        자연스럽게 Deep RL로 확장하는 학습 경로를 따릅니다.
+      </p>
+    </section>
+
+    <!-- 학습 목표 -->
+    <section class="content-section">
+      <h3>🎯 학습 목표</h3>
+      <ul class="objectives-list">
+        <li><strong>MDP 이해:</strong> 상태·행동·보상·전이·감가요소의 수학적 정의와 직관</li>
+        <li><strong>가치함수:</strong> 상태가치/행동가치(Q)와 정책의 관계, 최적성 개념</li>
+        <li><strong>Bellman 방정식:</strong> 기대/최적 Bellman 식의 유도와 해석</li>
+        <li><strong>동적계획법:</strong> Policy Iteration, Value Iteration 구현 및 수렴 특성</li>
+        <li><strong>MC &amp; TD 학습:</strong> MC, SARSA, Q-Learning의 차이점과 수렴 조건</li>
+        <li><strong>실험 환경:</strong> Gym을 활용한 실험 재현성 확보(시드, 로그, 평가)</li>
+      </ul>
+    </section>
+
+    <!-- 학습 방향 -->
+    <section class="content-section">
+      <h3>🧭 학습 방향</h3>
+      <ul class="objectives-list">
+        <li>Deep RL은 <em>표현학습</em>을 결합한 구현 관점의 확장입니다. 먼저 <strong>기본 RL의 원리</strong>를 수학적으로 이해해야
+          복잡한 함수근사/분산학습/탐색전략 등을 견고하게 설계할 수 있습니다.</li>
+        <li><em>Sutton &amp; Barto</em> 교재로 기본 RL의 이론과 알고리즘을 체계적으로 익힙니다.</li>
+        <li><em>David Silver</em> 강의를 통해 Basic RL에서 Deep RL로 <strong>연결 고리</strong>를 명확히 합니다.</li>
+      </ul>
+    </section>
+
+    <!-- 교재 & 자료 -->
+    <section class="content-section">
+      <h3>📚 교재 &amp; 자료</h3>
+      <ul class="materials-list">
+        <li>
+          <strong>📖 Sutton &amp; Barto — Reinforcement Learning: An Introduction (2nd)</strong><br/>
+          <a href="https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf" target="_blank">BartoSutton.pdf</a><br/>
+          기본 RL의 표준 교재 (권장 범위: Ch. 1–6)
+        </li>
+        <li>
+          <strong>📹 David Silver’s RL Course (DeepMind)</strong><br/>
+          <a href="https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ" target="_blank">YouTube Playlist</a><br/>
+          Basic → Value-based → Policy-gradient로 자연스러운 확장 경로
+        </li>
+        <li>
+          <strong>💻 OpenAI Gym 문서</strong><br/>
+          <a href="https://www.gymlibrary.dev/" target="_blank">gymlibrary.dev</a><br/>
+          환경 인터페이스, 시드, 평가 루틴 정립
+        </li>
+        <li class="muted">
+          (선택) <strong>Algorithms for Reinforcement Learning</strong> — Csaba Szepesvári,
+          <a href="https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs.pdf" target="_blank">PDF</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 참고 논문 -->
+    <section class="content-section">
+      <h3>📄 참고 논문 (선택)</h3>
+      <ul class="papers-list">
+        <li>
+          <strong>Playing Atari with Deep Reinforcement Learning</strong><br/>
+          Mnih et al., NIPS Workshop 2013 — DQN의 시초<br/>
+          <a href="https://arxiv.org/abs/1312.5602" target="_blank">arXiv:1312.5602</a>
+        </li>
+        <li>
+          <strong>Human-level control through deep reinforcement learning</strong><br/>
+          Mnih et al., Nature 2015 — DQN 정식 논문<br/>
+          <a href="https://www.nature.com/articles/nature14236" target="_blank">Nature</a>
+        </li>
+        <li>
+          <strong>Double DQN / PER / Dueling DQN</strong><br/>
+          van Hasselt et al. (AAAI’16) / Schaul et al. (ICLR’16) / Wang et al. (ICML’16)<br/>
+          <a href="https://arxiv.org/abs/1509.06461" target="_blank">Double DQN</a> ·
+          <a href="https://arxiv.org/abs/1511.05952" target="_blank">PER</a> ·
+          <a href="https://arxiv.org/abs/1511.06581" target="_blank">Dueling</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 시험 및 성능 기준 -->
+    <section class="content-section">
+      <h3>✅ 시험 및 성능 기준</h3>
+      <div class="evaluation-grid">
+        <div class="eval-item">
+          <h4>📝 이론 시험</h4>
+          <p><strong>내용:</strong> MDP, 가치함수, Bellman 식, DP, MC, TD</p>
+          <p><strong>기준:</strong> 증명/유도 포함 <strong>85점 이상</strong></p>
         </div>
-    </header>
-
-    <nav class="main-nav">
-        <div class="container">
-            <ul>
-                <li><a href="index.html">홈</a></li>
-                <li><a href="stage1.html">기초 공부 1</a></li>
-                <li><a href="stage2.html" class="active">기초 공부 2</a></li>
-                <li><a href="stage3.html">기초 공부 3</a></li>
-                <li><a href="stage4.html">연구 분야 탐색</a></li>
-                <li><a href="stage5.html">연구 시작</a></li>
-            </ul>
+        <div class="eval-item">
+          <h4>💻 알고리즘 구현</h4>
+          <p><strong>내용:</strong> MC, SARSA, Q-Learning, (선택) DQN</p>
+          <p><strong>기준:</strong> 정상 작동 및 수렴 로그 제시(평균리턴/에피소드 길이)</p>
         </div>
-    </nav>
-
-    <main class="container">
-        <section class="stage-header">
-            <h2>기초 공부 2단계</h2>
-            <p class="period">📅 학습 기간: 3-4개월 (9주차 - 16주차)</p>
-            <p>강화학습의 기초 이론과 고전적인 알고리즘들을 학습하고 구현합니다.</p>
-        </section>
-
-        <section class="content-section">
-            <h3>🎯 학습 목표</h3>
-            <ul class="objectives-list">
-                <li><strong>MDP 이해:</strong> Markov Decision Process의 개념과 수학적 정의</li>
-                <li><strong>Value Function:</strong> State Value Function과 Action Value Function (Q-Function) 이해</li>
-                <li><strong>Bellman Equation:</strong> Bellman Expectation/Optimality Equation 유도 및 이해</li>
-                <li><strong>Dynamic Programming:</strong> Policy Iteration, Value Iteration 알고리즘 구현</li>
-                <li><strong>Monte Carlo & TD Learning:</strong> MC, SARSA, Q-Learning 알고리즘 구현</li>
-                <li><strong>환경 구축:</strong> OpenAI Gym을 활용한 RL 환경 설정 및 실험</li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h3>📚 강의 자료</h3>
-            <ul class="materials-list">
-                <li>
-                    <strong>📖 Reinforcement Learning: An Introduction (Sutton & Barto)</strong><br>
-                    <a href="http://incompleteideas.net/book/the-book-2nd.html" target="_blank">incompleteideas.net/book</a><br>
-                    강화학습의 바이블, 반드시 읽어야 할 교재 (Chapter 1-6)
-                </li>
-                <li>
-                    <strong>📹 David Silver's RL Course (DeepMind)</strong><br>
-                    <a href="https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ" target="_blank">YouTube Playlist</a><br>
-                    강화학습의 기초를 명쾌하게 설명하는 강의 (Lecture 1-5)
-                </li>
-                <li>
-                    <strong>📹 CS285: Deep Reinforcement Learning (UC Berkeley)</strong><br>
-                    <a href="http://rail.eecs.berkeley.edu/deeprlcourse/" target="_blank">rail.eecs.berkeley.edu/deeprlcourse</a><br>
-                    Sergey Levine의 Deep RL 강의 (초반부)
-                </li>
-                <li>
-                    <strong>📖 Algorithms for Reinforcement Learning (Csaba Szepesvári)</strong><br>
-                    <a href="https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs.pdf" target="_blank">PDF 링크</a><br>
-                    RL 알고리즘의 수학적 이론
-                </li>
-                <li>
-                    <strong>💻 OpenAI Gym Documentation</strong><br>
-                    <a href="https://www.gymlibrary.dev/" target="_blank">gymlibrary.dev</a><br>
-                    강화학습 환경 구축 가이드
-                </li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h3>📄 참고 논문</h3>
-            <ul class="papers-list">
-                <li>
-                    <strong>Playing Atari with Deep Reinforcement Learning</strong><br>
-                    Mnih et al., NIPS Workshop 2013 (DQN의 시작)<br>
-                    <a href="https://arxiv.org/abs/1312.5602" target="_blank">arXiv:1312.5602</a>
-                </li>
-                <li>
-                    <strong>Human-level control through deep reinforcement learning</strong><br>
-                    Mnih et al., Nature 2015 (DQN)<br>
-                    <a href="https://www.nature.com/articles/nature14236" target="_blank">Nature Paper</a>
-                </li>
-                <li>
-                    <strong>Deep Reinforcement Learning with Double Q-learning</strong><br>
-                    van Hasselt et al., AAAI 2016<br>
-                    <a href="https://arxiv.org/abs/1509.06461" target="_blank">arXiv:1509.06461</a>
-                </li>
-                <li>
-                    <strong>Prioritized Experience Replay</strong><br>
-                    Schaul et al., ICLR 2016<br>
-                    <a href="https://arxiv.org/abs/1511.05952" target="_blank">arXiv:1511.05952</a>
-                </li>
-                <li>
-                    <strong>Dueling Network Architectures for Deep Reinforcement Learning</strong><br>
-                    Wang et al., ICML 2016<br>
-                    <a href="https://arxiv.org/abs/1511.06581" target="_blank">arXiv:1511.06581</a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <h3>✅ 시험 및 성능 기준</h3>
-            <div class="evaluation-grid">
-                <div class="eval-item">
-                    <h4>📝 이론 시험</h4>
-                    <p><strong>내용:</strong> MDP, Bellman Equation, DP, MC, TD Learning</p>
-                    <p><strong>통과 기준:</strong> 수학적 증명 포함 85점 이상</p>
-                </div>
-                <div class="eval-item">
-                    <h4>💻 알고리즘 구현</h4>
-                    <p><strong>내용:</strong> Q-Learning, SARSA, DQN 직접 구현</p>
-                    <p><strong>통과 기준:</strong> 모든 알고리즘이 정상 작동하고 수렴</p>
-                </div>
-                <div class="eval-item">
-                    <h4>🎮 환경 해결</h4>
-                    <p><strong>내용:</strong> CartPole, MountainCar 등 Gym 환경</p>
-                    <p><strong>통과 기준:</strong> CartPole 평균 reward 195 이상 (100 에피소드)</p>
-                </div>
-                <div class="eval-item">
-                    <h4>📊 분석 리포트</h4>
-                    <p><strong>내용:</strong> 알고리즘 비교 분석 및 실험 결과</p>
-                    <p><strong>통과 기준:</strong> 체계적인 실험 설계 및 결과 분석</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <h3>💡 주간 학습 계획</h3>
-            <ul class="objectives-list">
-                <li><strong>9주차:</strong> MDP, Bellman Equation 이론 학습</li>
-                <li><strong>10주차:</strong> Dynamic Programming (Policy Iteration, Value Iteration)</li>
-                <li><strong>11주차:</strong> Monte Carlo Methods</li>
-                <li><strong>12주차:</strong> Temporal Difference Learning (TD(0), SARSA)</li>
-                <li><strong>13주차:</strong> Q-Learning 및 Off-Policy Learning</li>
-                <li><strong>14주차:</strong> Function Approximation 및 DQN 기초</li>
-                <li><strong>15주차:</strong> OpenAI Gym 실습 및 프로젝트</li>
-                <li><strong>16주차:</strong> 종합 평가 및 발표</li>
-            </ul>
-        </section>
-
-        <div class="nav-buttons">
-            <a href="stage1.html" class="btn btn-prev">← 이전: 기초 공부 1</a>
-            <a href="stage3.html" class="btn">다음 단계: 기초 공부 3 →</a>
+        <div class="eval-item">
+          <h4>🎮 환경 해결</h4>
+          <p><strong>내용:</strong> CartPole, MountainCar 등</p>
+          <p><strong>기준:</strong> CartPole 100 에피소드 평균 <strong>195+</strong></p>
         </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 UNIST MLIC Lab. All rights reserved.</p>
+        <div class="eval-item">
+          <h4>📊 분석 리포트</h4>
+          <p><strong>내용:</strong> 알고리즘 비교, 하이퍼파라미터, 수렴성/분산 분석</p>
+          <p><strong>기준:</strong> 재현 가능한 실험 설계 및 결과 해석</p>
         </div>
-    </footer>
+      </div>
+    </section>
+
+    <!-- 주간 학습 계획 -->
+    <section class="content-section">
+      <h3>💡 주간 학습 계획</h3>
+      <ul class="objectives-list">
+        <li><strong>9주차:</strong> MDP 공식화, Bellman 기대/최적 방정식 유도</li>
+        <li><strong>10주차:</strong> 동적계획법 — Policy/Value Iteration 구현·수렴 실험</li>
+        <li><strong>11주차:</strong> Monte Carlo 예측/통제 — 탐색 시작, Epsilon-greedy</li>
+        <li><strong>12주차:</strong> TD(0)·n-step TD, SARSA — 온폴리시의 특성</li>
+        <li><strong>13주차:</strong> Q-Learning — 오프폴리시, 수렴 이슈와 실전 팁</li>
+        <li><strong>14주차:</strong> 함수근사/특징공학, (선택) DQN 기본 구조</li>
+        <li><strong>15주차:</strong> Gym 실험 정리 — 시드/로그/평가 파이프라인</li>
+        <li><strong>16주차:</strong> 종합 평가 — 구현 점검, 리포트 및 발표</li>
+      </ul>
+    </section>
+
+    <div class="nav-buttons">
+      <a href="stage1.html" class="btn btn-prev">← 이전: 기초 공부 1</a>
+      <a href="stage3.html" class="btn">다음 단계: 기초 공부 3 →</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 UNIST MLIC Lab. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
